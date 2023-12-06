@@ -9,20 +9,28 @@ const singsofZodiac = {
   favoriteWords: ["When","Basically","Interesting","Seriously","What","Okay","Maybe","Really","Obviously","Right","No","Whatever"],
   todo: ["Do That","Do Not Do That","Maybe Do That","Maybe dont do that","Definitely do it"]
 }
-const randomStrings = () =>{
-  for (let i = 0; i<singsofZodiac.length; i++){
-    switch(param) {
-      case sings:
-        console.log(`Your zodiac sign is ${sings[Math.floor(Math.random())*sings.length]}`);
+
+/* i think the logic for the random selection is having problems while to switch cases are correct
+i did not include how we are going to select which randomstring we need to choose with signsofZodiac
+i should think about how to approach this */
+const randomStrings = (singsofZodiac) =>{
+  for (zodiac in singsofZodiac){
+    switch(zodiac) {
+      case singsofZodiac.sings:
+        return console.log(`Your zodiac sign is ${singsofZodiac.sings[randomSelector*singsofZodiac.sings.length]}`);
         break;
-      case favoriteWords:
-        console.log(`Your favorite word is ${favoriteWords[Math.floor(Math.random())*favoriteWords.length]}`);
+      case singsofZodiac.favoriteWords:
+         return console.log(`Your favorite word is ${singsofZodiac.favoriteWords[randomSelector*singsofZodiac.favoriteWords.length]}`);
         break;
-      case todo:
-        console.log(`I think you  ${todo[Math.floor(Math.random())*todo.length]}`);
+      case singsofZodiac.todo:
+         return console.log(`I think you  ${singsofZodiac.todo[randomSelector*singsofZodiac.todo.length]}`);
         break;
       default:
         break;
     }
   }
 }
+
+randomStrings(singsofZodiac);
+
+console.log(singsofZodiac.sings[0]);
